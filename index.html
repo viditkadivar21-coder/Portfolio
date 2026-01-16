@@ -16,7 +16,6 @@
     <nav id="navbar">
         <a href="#about" title="Go to About Section">About</a> |
         <a href="#skills" title="Go to Skills Section">Skills</a> |
-        <a href="#projects" title="Go to Projects Section">Projects</a> |
         <a href="#education" title="Go to Education Section">Education</a> |
         <a href="#contact" title="Go to Contact Section">Contact</a>
     </nav>
@@ -52,5 +51,85 @@
     </section>
 
     <hr>
+
+    <section id="skills" data-section="skills">
+        <h2>My Skills</h2>
+
+        <h3>Frontend:</h3>
+        <ul>
+            <li title="Markup Language">HTML5</li>
+            <li title="Styling Language">CSS3</li>
+            <li title="Styling Language">Bootstrap</li>
+            <li title="Programming Language">JavaScript</li>
+
+        </ul>
+    </section>
+
+    <h3>Backend:</h3>
+    <ul>
+        <li title="Backend runtime environment">Note.js</li>
+    </ul>
+
+    <h3>Databases:</h3>
+    <ul>
+        <li title="A relational database management system">MySQL</li>
+    </ul>
+
+    <h3>Tools:</h3>
+    <ul>
+        <li>Git</li>
+        <li>GitHub</li>
+        <li>VS Code</li>
+    </ul>
+
+    <hr>
+
+    <section id="education" data-section="education"> 
+        <h2>Education</h2>
+        <ol> 
+            <li> <strong>Degree</strong> – Computer engineering <br><small>2022 – 2026</small> </li> 
+            <li> <strong>High School</strong> – Science <br> <small>2020 – 2022</small> </li> 
+        </ol> 
+    </section>
+
+    <hr>
+
+    <section id="contact" data-section="contact">
+        
+        <h2>Contact Me</h2>
+
+        <form action="#" method="post" aria-label="Contact Form"> 
+            <label for="name">Full Name:</label>
+            <br>
+            <input type="text" id="name" placeholder="Enter your name" required minlength="3" title="Enter at least 3 characters">
+            <br><br> 
+            <label for="email">Email Address:</label>
+            <br> 
+            <input type="email" id="email" placeholder="example@email.com" required title="Enter a valid email address">
+            <br><br> 
+            <label for="phone">Phone Number:</label><br> 
+            <input type="tel" id="phone" placeholder="9876543210" pattern="[0-9]{10}" title="Enter 10 digit number">
+            <br><br> 
+            <label for="message">Your Message:</label>
+            <br> 
+            <textarea id="message" rows="5" cols="40" placeholder="Write your message here..." required></textarea>
+            <br><br> 
+            <label> <input type="checkbox" name="subscribe" checked> Subscribe to newsletter </label>
+            <br><br> 
+            <button type="submit" title="Send your message">Send Message</button> 
+            <button type="reset" title="Clear all fields">Reset</button> 
+        </form>
+    
+    </section>
+    </main> 
+    
+    <hr> 
+    
+    <footer> 
+        <p>&copy; 2026 Vidit Kadivar | All Rights Reserved.</p> 
+        <p> 
+            <a href="#top" title="Back to top of page">Back to Top</a> 
+        </p> 
+    </footer>
 </body>
 </html>
