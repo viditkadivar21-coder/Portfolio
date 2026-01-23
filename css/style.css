@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+:root {
+    --bg: #f1f5f9;
+    --card: #ffffff;
+    --text: #1e293b;
+    --muted: #64748b;
+    --primary: #2563eb;
+    --border: #e2e8f0;
+}
+
+#header {
+    text-align: center;
+    padding: 50px 20px;
+    background: var(--card);
+}
+
+#header h1 {
+    font-size: 34px;
+}
+
+#header p {
+    color: var(--muted);
+}
+
+#navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--card);
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+
+#navbar a {
+    text-decoration: none;
+    color: var(--primary);
+    margin: 0 12px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+#navbar a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+section {
+    max-width: 1100px;
+    margin: 40px auto;
+    background: var(--card);
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+#about {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+#about img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--primary);
+    margin: 0;
+}
+
+#about h2 {
+    grid-column: span 2;
+}
+
+#about p,
+#about details {
+    grid-column: 2;
+}
+
+#about details {
+    margin-top: 10px;
+    padding: 12px 16px;
+    background: #f8fafc;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary);
+}
+
+#about img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(37,99,235,0.35);
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    #about {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    #about img {
+        margin: auto;
+    }
+
+    #about p,
+    #about details {
+        grid-column: span 1;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    #about details {
+        background: #020617;
+    }
+}
+
+#skills {
+    position: relative;
+}
+
+#skills h3 {
+    margin-top: 25px;
+    color: var(--secondary);
+    font-size: 18px;
+}
+
+#skills ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+#skills li {
+    background: #f1f5f9;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    border: 1px solid var(--border);
+    cursor: default;
+    transition: all 0.3s ease;
+}
+
+#skills li:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(37,99,235,0.35);
+}
+
+#skills h3::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: var(--primary);
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+    #skills li {
+        background: #020617;
+        color: #e5e7eb;
+    }
+
+    #skills li:hover {
+        background: var(--primary);
+        color: #020617;
+    }
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+button {
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: none;
+    background: var(--primary);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+button[type="reset"] {
+    background: #64748b;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: var(--muted);
+}
+
+@media (max-width: 768px) {
+    #about,
+    #skills,
+    #education,
+    #contact {
+        grid-template-columns: 1fr;
+    }
+
+    #about h2,
+    #skills h2,
+    #education h2,
+    #contact h2 {
+        grid-column: span 1;
+    }
+
+    #header h1 {
+        font-size: 26px;
+    }
+}
+
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #020617;
+        --card: #0f172a;
+        --text: #e5e7eb;
+        --muted: #94a3b8;
+        --primary: #38bdf8;
+        --border: #1e293b;
+    }
+
+    body {
+        background: var(--bg);
+        color: var(--text);
+    }
+
+    section,
+    #header,
+    #navbar {
+        background: var(--card);
+    }
+}
