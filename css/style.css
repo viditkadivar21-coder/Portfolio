@@ -82,6 +82,13 @@ section {
     margin: 0;
 }
 
+/* Image Zoom */
+.zoom {
+    transform: scale(1.5);
+    transition: 0.4s;
+    cursor: zoom-out;
+}
+
 #about h2 {
     grid-column: span 2;
 }
@@ -172,6 +179,16 @@ section {
     margin-right: 8px;
 }
 
+/*Skill Bars */
+.bar {
+    display: block;
+    height: 6px;
+    background: green;
+    width: 0;
+    margin-top: 5px;
+    transition: 1s;
+}
+
 @media (prefers-color-scheme: dark) {
     #skills li {
         background: #020617;
@@ -185,7 +202,6 @@ section {
 }
 
 input, textarea {
-    width: 100%;
     padding: 10px;
     margin-top: 6px;
     border-radius: 8px;
@@ -264,4 +280,59 @@ footer {
     #navbar {
         background: var(--card);
     }
+}
+
+#darkBtn{
+    position: fixed;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Scroll Animation */
+section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.6s ease;
+}
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Top Button ===== */
+#topBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/*Dark Mode */
+.dark {
+    background: #121212;
+    color: white;
+}
+.dark a {
+    color: lightblue;
+}
+
+.dark header,
+.dark section,
+.dark footer {
+    background: #1e1e1e;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+/* Typing Text */
+#typing {
+    color: #ff9800;
+    margin-top: 10px;
 }
